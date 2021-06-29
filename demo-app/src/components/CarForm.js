@@ -3,9 +3,9 @@ import { useForm } from '../hooks/useForm';
 const getInitCarForm = () => ({
   make: '',
   model: '',
-  year: NaN,
+  year: '',
   color: '',
-  price: 0,
+  price: '',
 });
 
 export const CarForm = props => {
