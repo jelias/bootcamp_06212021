@@ -408,7 +408,7 @@
 
 
     </script> -->
-    <!-- <script>
+    <script>
 
       // const xhr = new XMLHttpRequest();
 
@@ -425,12 +425,12 @@
       //   .then(res => res.json())
       //   .then(cars => console.log(cars));
 
-      const getAllCars = async () => {
-        // Collection URL
-        const res = await fetch("http://localhost:3060/cars");
-        const cars = await res.json();
-        return cars;
-      };
+      // const getAllCars = async () => {
+      //   // Collection URL
+      //   const res = await fetch("http://localhost:3060/cars");
+      //   const cars = await res.json();
+      //   return cars;
+      // };
 
       // const getAllCars = async () => {
       //   const res = await fetch("http://localhost:3060/cars", {
@@ -440,58 +440,58 @@
       //   return cars;
       // };
       
-      const getOneCar = async (carId) => {
-        // Member/Element URL
-        const res = await fetch("http://localhost:3060/cars/" + encodeURIComponent(carId));
-        const car = await res.json();
-        return car;
-      };
+      // const getOneCar = async (carId) => {
+      //   // Member/Element URL
+      //   const res = await fetch("http://localhost:3060/cars/" + encodeURIComponent(carId));
+      //   const car = await res.json();
+      //   return car;
+      // };
 
 
       // getAllCars().then(cars => console.log(cars));
-      getOneCar(1).then(car => console.log(car));
+      // getOneCar(1).then(car => console.log(car));
 
-      const appendCar = async (car) => {
-        // Collection URL
-        const res = await fetch("http://localhost:3060/cars", {
-          method: 'POST', // append a resource to the list
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(car)
-        });
-        const carThatWasAdded = await res.json();
-        return carThatWasAdded;
-      };
+      // const appendCar = async (car) => {
+      //   // Collection URL
+      //   const res = await fetch("http://localhost:3060/cars", {
+      //     method: 'POST', // append a resource to the list
+      //     headers: { 'Content-Type': 'application/json' },
+      //     body: JSON.stringify(car)
+      //   });
+      //   const carThatWasAdded = await res.json();
+      //   return carThatWasAdded;
+      // };
 
       // the REST API will calculate the ID
       // appendCar({
-      //   make: 'Nissan',
-      //   model: 'Pathfinder',
-      //   year: 2016,
-      //   color: 'darknavy',
-      //   price: 40000,
-      // }).then(car => {
-      //   console.log(car);
-      // });
+      //    make: 'Nissan',
+      //    model: 'Pathfinder',
+      //    year: 2016,
+      //    color: 'darknavy',
+      //    price: 40000,
+      //  }).then(car => {
+      //    console.log(car);
+      //  });
 
-      const replaceCar = async (car) => {
-        // Member/Element URL
-        const res = await fetch("http://localhost:3060/cars/" + encodeURIComponent(car.id), {
-          method: 'PUT', // replace a resource to the list
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(car)
-        });
-        const carThatWasUpdated = await res.json();
-        return carThatWasUpdated;
-      };
+      // const replaceCar = async (car) => {
+      //   // Member/Element URL
+      //   const res = await fetch("http://localhost:3060/cars/" + encodeURIComponent(car.id), {
+      //     method: 'PUT', // replace a resource to the list
+      //     headers: { 'Content-Type': 'application/json' },
+      //     body: JSON.stringify(car)
+      //   });
+      //   const carThatWasUpdated = await res.json();
+      //   return carThatWasUpdated;
+      // };
 
-      const deleteCar = async (carId) => {
-        // Member/Element URL
-        await fetch("http://localhost:3060/cars/" + encodeURIComponent(carId), {
-          method: 'DELETE', // delete a resource from the list
-        });
-      };
+      // const deleteCar = async (carId) => {
+      //   // Member/Element URL
+      //   await fetch("http://localhost:3060/cars/" + encodeURIComponent(carId), {
+      //     method: 'DELETE', // delete a resource from the list
+      //   });
+      // };
 
-    </script> -->
+    </script>
 
   </body>
 </html>

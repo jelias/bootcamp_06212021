@@ -3,9 +3,9 @@ import { useEffect, useMemo } from 'react';
 import { bindActionCreators } from 'redux';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { refreshCars, deleteCar,
+import { refreshCars, deleteCar, addCar, saveCar,
   
-  createAddCarAction, createSaveCarAction, 
+  createSaveCarAction, 
   createEditCarAction, createCancelCarAction,
   
 } from '../actions/car-tool';
@@ -22,7 +22,7 @@ export const CarToolContainer = () => {
   const dispatch = useDispatch();
 
   const carTableActions = useMemo (() => bindActionCreators({
-    onSaveCar: createSaveCarAction,
+    onSaveCar: saveCar,
     onEditCar: createEditCarAction,
     onCancelCar: createCancelCarAction,
 
@@ -31,7 +31,7 @@ export const CarToolContainer = () => {
   }, dispatch), [dispatch]);
 
   const carFormActions = bindActionCreators({
-    onSubmitCar: createAddCarAction,
+    onSubmitCar: addCar,
   }, useDispatch());
 
   useEffect(() => {

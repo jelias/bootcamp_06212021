@@ -28,7 +28,7 @@ export class CarEditRow extends Component {
     const { car, onCancelCar: cancelCar } = this.props;
     const { make, model, year, color, price } = this.state;
 
-    console.log(this.props);
+    // console.log(this.props);
 
     return (
       <tr>
